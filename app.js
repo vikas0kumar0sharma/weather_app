@@ -2,7 +2,7 @@ const apikey = "22ece879a876c7d7955ed37f5e767987";
 let apiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=jaipur";
 
-playAudio('../wind.mp3')
+playAudio('wind.mp3')
 
 async function checkWeather() {
 
@@ -27,15 +27,15 @@ async function checkWeather() {
     document.getElementById("win").innerText = data.wind.speed + "km/h";
 
     if (data.weather[0].main == "Clouds") {
-      document.getElementById("curr").src = "../clouds.png";
+      document.getElementById("curr").src = "clouds.png";
     } else if (data.weather[0].main == "Clear") {
-      document.getElementById("curr").src = "../clear.png";
+      document.getElementById("curr").src = "clear.png";
     } else if (data.weather[0].main == "Drizzle") {
-      document.getElementById("curr").src = "../drizzle.png";
+      document.getElementById("curr").src = "drizzle.png";
     } else if (data.weather[0].main == "Mist") {
-      document.getElementById("curr").src = "../mist.png";
+      document.getElementById("curr").src = "mist.png";
     } else if (data.weather[0].main == "Rain") {
-      document.getElementById("curr").src = "../rain.png";
+      document.getElementById("curr").src = "rain.png";
     }
   }
 }
