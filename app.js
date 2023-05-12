@@ -1,8 +1,14 @@
+function playAudio(url) {
+  new Audio(url).play();
+}
+
+playAudio('wind.mp3')
+
 const apikey = "22ece879a876c7d7955ed37f5e767987";
 let apiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=jaipur";
 
-playAudio('wind.mp3')
+
 
 async function checkWeather() {
 
@@ -52,6 +58,4 @@ function reload(){
   window.location.reload()
 }
 
-function playAudio(url) {
-  new Audio(url).play();
-}
+
