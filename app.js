@@ -2,7 +2,7 @@ function playAudio(url) {
   new Audio(url).play();
 }
 
-playAudio('wind.mp3')
+
 
 const apikey = "22ece879a876c7d7955ed37f5e767987";
 let apiUrl =
@@ -11,7 +11,7 @@ let apiUrl =
 
 
 async function checkWeather() {
-
+  playAudio('wind.mp3')
   const response = await fetch(apiUrl + `&appid=${apikey}`);
   console.log("we are fetching data plz wait")
   if (response.status == 404) {
